@@ -1,0 +1,207 @@
+---
+import '../styles/style.css';
+import '../styles/output.css';
+import '../styles/normalize.css';
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<style>
+		
+	</style>
+	<body>
+		<header class="w-full fixed top-0 flex justify-center">
+			<div class="container flex justify-between">
+				<div class="logo">
+					<svg width="79" height="46" viewBox="0 0 655 386" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 155.644L283.482 75.1004L277.476 126.649L0 208.803V286.126L286.152 386L293.886 328.008L44.4442 249.075L314.713 171.753L339 1L0 102.485V155.644Z" fill="white"/>
+						<path d="M655 157.617L424.448 72.375L387.096 318.45L624.088 246.075L491.424 201.042L452.784 229.992L468.24 141.533L655 207.475V283.067L333 386L387.096 0L655 107.758V157.617Z" fill="#F9CA32"/>
+					</svg>					
+				</div>
+				<div class="header__navegador flex gap-10">
+					<nav class="hidden md:flex items-center" >
+						<ul class="flex gap-12" >
+							<a href="#home" class="medium--p" >Inicio</a>
+							<a href="#sobre-mi" class="medium--p" >Sobre mi</a>
+							<a href="#servicios-id" class="medium--p" >Servicios</a>
+							<a href="#proyectos-id" class="medium--p" >Proyectos</a>
+						</ul>
+					</nav>
+					<button class="boton--primario">
+						Contactame
+					</button>
+				</div>
+			</div>
+		</header>
+		<main class="w-full" >
+			<section id="home" class="home w-full">
+				<div class="container md:flex">
+					<div class="home__titulo flex flex-col gap-4 md:w-4/6">
+						<h3 class="bold--h3 texto--primario">¡Hola!</h3>
+						<h1 class="bold--h2">Soy Rodrigo Guzman Carranza</h1>
+						<h4 class="bold--h4">Backend / Frontend Developer</h4>
+						<button class="my-10 w-fit boton--hover">
+							Contactame
+						</button>
+					</div>
+					<!-- Aqui va la imagen -->
+					<object data="../../public/programming-svg.svg" type="image/svg+xml" class="svg-container w-full md:w-2/6">
+						Tu navegador no soporta SVG
+					</object>
+				</div>
+			</section>
+			<section id="sobre-mi" class="sobremi w-full">
+				<div class="container md:flex justify-between">
+					<!-- Aqui va la imagen -->
+					<object data="../../public/sobre-mi.svg" type="image/svg+xml" class="svg-container w-full mb-10 md:w-2/6">
+						<!-- Texto alternativo en caso de que el SVG no se cargue -->
+						Tu navegador no soporta SVG
+					</object>
+					<div class="sobremi__contenido flex flex-col gap-4 md:w-3/6">
+						<h2 class="bold--h2">Sobre mi</h2>
+						<div class="divider"></div>
+						<p class="regular--h4" >Desarrollador frontend, backend especializado en el desarrollo de sitios web potentes y escalables. Actualmente me encuentro estudiante la carrera de ingenieria de software en una institucion de mi pais. Cuento con un año de experiencia en el sector y estoy entusiasmado de aportar a tu proyecto de manera activa.</p>
+					</div>
+				</div>
+			</section>
+			<section id="servicios-id" class="servicios w-full">
+				<div class="container">
+					<div class="servicios__titulo flex flex-col items-center gap-4 mb-5">
+						<h2 class="bold--h2" >Servicios</h2>
+						<div class="divider"></div>
+					</div>
+					<div class="servicios__contenido flex flex-col gap-5 mt-10 md:flex-row">
+						<div class="servicios__tarjeta w-1/1 flex flex-col items-center md:w-1/3">
+							<!-- Aca va el icono -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M22 5c0-1.654-1.346-3-3-3H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.424c.618-.735 1-1.692 1-2.746V5zm-2 0v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2V4zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 14v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.131c.254.067.517.111.787.125A3.988 3.988 0 0 0 9 10.643c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357a3.988 3.988 0 0 0 3.213 1.351c.271-.014.533-.058.787-.125V19h-3z"></path></svg>
+							<div class="servicios__tarjeta-contenido flex flex-col gap-5 text-center mt-5">
+								<h3 class="medium--h3">E-Commerce</h3>
+								<p class="regular--h4">Puedo realizar una tienda online a la medida para tu negocio. De esa manera aumentaras tus ventas y el alcance de tu negocio.</p>
+							</div>
+						</div>
+						<div class="servicios__tarjeta w-1/1 flex flex-col items-center md:w-1/3">
+							<!-- Aca va el icono -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M22 5c0-1.654-1.346-3-3-3H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.424c.618-.735 1-1.692 1-2.746V5zm-2 0v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2V4zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 14v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.131c.254.067.517.111.787.125A3.988 3.988 0 0 0 9 10.643c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357a3.988 3.988 0 0 0 3.213 1.351c.271-.014.533-.058.787-.125V19h-3z"></path></svg>
+							<div class="servicios__tarjeta-contenido flex flex-col gap-5 text-center mt-5">
+								<h3 class="medium--h3">E-Commerce</h3>
+								<p class="regular--h4">Puedo realizar una tienda online a la medida para tu negocio. De esa manera aumentaras tus ventas y el alcance de tu negocio.</p>
+							</div>
+						</div>
+						<div class="servicios__tarjeta w-1/1 flex flex-col items-center md:w-1/3">
+							<!-- Aca va el icono -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M22 5c0-1.654-1.346-3-3-3H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.424c.618-.735 1-1.692 1-2.746V5zm-2 0v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2V4zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 14v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.131c.254.067.517.111.787.125A3.988 3.988 0 0 0 9 10.643c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357a3.988 3.988 0 0 0 3.213 1.351c.271-.014.533-.058.787-.125V19h-3z"></path></svg>
+							<div class="servicios__tarjeta-contenido flex flex-col gap-5 text-center mt-5">
+								<h3 class="medium--h3">E-Commerce</h3>
+								<p class="regular--h4">Puedo realizar una tienda online a la medida para tu negocio. De esa manera aumentaras tus ventas y el alcance de tu negocio.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="proyectos-id" class="proyectos w-full">
+				<div class="container">
+					<div class="proyectos__titulo flex flex-col gap-4 items-center mb-10">
+						<h2 class="bold--h2" >Proyectos</h2>
+						<div class="divider"></div>
+						<p class="regular--h4 text-center" >Recorre los trabajos en los que he colaborado a lo largo de mi carrera.</p>
+					</div>
+					<div class="proyectos__contenido flex flex-col gap-5 mt-10">
+						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
+							<p class="bold--p" >Proyecto</p>
+							<h3 class="bold--h3" >Loopsy</h3>
+							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
+							<p class="bold--p" >Tecnologias:</p>
+							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
+								<div class="proyecto__tarjeta-pastilla">
+									Php
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Javascript
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Css
+								</div>
+								
+							</div>
+						</div>
+						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
+							<p class="bold--p" >Proyecto</p>
+							<h3 class="bold--h3" >Loopsy</h3>
+							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
+							<p class="bold--p" >Tecnologias:</p>
+							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
+								<div class="proyecto__tarjeta-pastilla">
+									Php
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Javascript
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Css
+								</div>
+								
+							</div>
+						</div>
+						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
+							<p class="bold--p" >Proyecto</p>
+							<h3 class="bold--h3" >Loopsy</h3>
+							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
+							<p class="bold--p" >Tecnologias:</p>
+							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
+								<div class="proyecto__tarjeta-pastilla">
+									Php
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Javascript
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Css
+								</div>
+								
+							</div>
+						</div>
+						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
+							<p class="bold--p" >Proyecto</p>
+							<h3 class="bold--h3" >Loopsy</h3>
+							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
+							<p class="bold--p" >Tecnologias:</p>
+							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
+								<div class="proyecto__tarjeta-pastilla">
+									Php
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Javascript
+								</div>
+								<div class="proyecto__tarjeta-pastilla">
+									Css
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="w-full flex justify-center">
+			<div class="container flex flex-col gap-5 items-center">
+				<div class="footer__redes flex gap-4">
+					<!-- Aqui iconos de redes -->
+					<a href="https://github.com/RodriGuzmanC?tab=repositories" target="__BLANK">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+					</a>
+					<a href="https://www.linkedin.com/in/eduis-rodrigo-guzman-carranza-3a2111260/" target="__BLANK">
+						<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
+					</a>
+				</div>
+				<p class="regular--p">Elaborado por Rodrigo Guzman   🇵🇪 | 2024</p>
+			</div>
+		</footer>
+	</body>
+</html>
