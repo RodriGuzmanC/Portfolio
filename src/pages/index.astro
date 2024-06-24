@@ -2,6 +2,9 @@
 import '../styles/style.css';
 import '../styles/output.css';
 import '../styles/normalize.css';
+import TarjetaServicio from '../components/TarjetaServicio.astro';
+import TarjetaProyecto from '../components/TarjetaProyecto.astro';
+
 
 ---
 
@@ -17,9 +20,9 @@ import '../styles/normalize.css';
 		
 	</style>
 	<body>
-		<header class="w-full fixed top-0 flex justify-center">
+		<header id="header" class="w-full fixed top-0 flex justify-center md:w-fit md:rounded-lg md:mt-8 ease duration-1000">
 			<div class="container flex justify-between">
-				<div class="logo">
+				<div class="logo mr-10">
 					<svg width="79" height="46" viewBox="0 0 655 386" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 155.644L283.482 75.1004L277.476 126.649L0 208.803V286.126L286.152 386L293.886 328.008L44.4442 249.075L314.713 171.753L339 1L0 102.485V155.644Z" fill="white"/>
 						<path d="M655 157.617L424.448 72.375L387.096 318.45L624.088 246.075L491.424 201.042L452.784 229.992L468.24 141.533L655 207.475V283.067L333 386L387.096 0L655 107.758V157.617Z" fill="#F9CA32"/>
@@ -27,16 +30,16 @@ import '../styles/normalize.css';
 				</div>
 				<div class="header__navegador flex gap-10">
 					<nav class="hidden md:flex items-center" >
-						<ul class="flex gap-12" >
+						<ul class="flex gap-8" >
 							<a href="#home" class="medium--p" >Inicio</a>
 							<a href="#sobre-mi" class="medium--p" >Sobre mi</a>
 							<a href="#servicios-id" class="medium--p" >Servicios</a>
 							<a href="#proyectos-id" class="medium--p" >Proyectos</a>
 						</ul>
 					</nav>
-					<button class="boton--primario">
+					<a class="boton--primario" href="#footer">
 						Contactame
-					</button>
+					</a>
 				</div>
 			</div>
 		</header>
@@ -47,12 +50,10 @@ import '../styles/normalize.css';
 						<h3 class="bold--h3 texto--primario">¡Hola!</h3>
 						<h1 class="bold--h2">Soy Rodrigo Guzman Carranza</h1>
 						<h4 class="bold--h4">Backend / Frontend Developer</h4>
-						<button class="my-10 w-fit boton--hover">
-							Contactame
-						</button>
+						<a class="my-10 w-fit boton--hover" href="#footer">Contactame</a>
 					</div>
 					<!-- Aqui va la imagen -->
-					<object data="../../public/programming-svg.svg" type="image/svg+xml" class="svg-container w-full md:w-2/6">
+					<object data="/programming-svg.svg" type="image/svg+xml" class="svg-container w-full md:w-2/6">
 						Tu navegador no soporta SVG
 					</object>
 				</div>
@@ -60,7 +61,7 @@ import '../styles/normalize.css';
 			<section id="sobre-mi" class="sobremi w-full">
 				<div class="container md:flex justify-between">
 					<!-- Aqui va la imagen -->
-					<object data="../../public/sobre-mi.svg" type="image/svg+xml" class="svg-container w-full mb-10 md:w-2/6">
+					<object data="/sobre-mi.svg" type="image/svg+xml" class="svg-container w-full mb-10 md:w-2/6">
 						<!-- Texto alternativo en caso de que el SVG no se cargue -->
 						Tu navegador no soporta SVG
 					</object>
@@ -77,31 +78,12 @@ import '../styles/normalize.css';
 						<h2 class="bold--h2" >Servicios</h2>
 						<div class="divider"></div>
 					</div>
-					<div class="servicios__contenido flex flex-col gap-5 mt-10 md:flex-row">
-						<div class="servicios__tarjeta w-1/1 flex flex-col items-center md:w-1/3">
-							<!-- Aca va el icono -->
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M22 5c0-1.654-1.346-3-3-3H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.424c.618-.735 1-1.692 1-2.746V5zm-2 0v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2V4zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 14v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.131c.254.067.517.111.787.125A3.988 3.988 0 0 0 9 10.643c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357a3.988 3.988 0 0 0 3.213 1.351c.271-.014.533-.058.787-.125V19h-3z"></path></svg>
-							<div class="servicios__tarjeta-contenido flex flex-col gap-5 text-center mt-5">
-								<h3 class="medium--h3">E-Commerce</h3>
-								<p class="regular--h4">Puedo realizar una tienda online a la medida para tu negocio. De esa manera aumentaras tus ventas y el alcance de tu negocio.</p>
-							</div>
-						</div>
-						<div class="servicios__tarjeta w-1/1 flex flex-col items-center md:w-1/3">
-							<!-- Aca va el icono -->
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M22 5c0-1.654-1.346-3-3-3H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.424c.618-.735 1-1.692 1-2.746V5zm-2 0v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2V4zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 14v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.131c.254.067.517.111.787.125A3.988 3.988 0 0 0 9 10.643c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357a3.988 3.988 0 0 0 3.213 1.351c.271-.014.533-.058.787-.125V19h-3z"></path></svg>
-							<div class="servicios__tarjeta-contenido flex flex-col gap-5 text-center mt-5">
-								<h3 class="medium--h3">E-Commerce</h3>
-								<p class="regular--h4">Puedo realizar una tienda online a la medida para tu negocio. De esa manera aumentaras tus ventas y el alcance de tu negocio.</p>
-							</div>
-						</div>
-						<div class="servicios__tarjeta w-1/1 flex flex-col items-center md:w-1/3">
-							<!-- Aca va el icono -->
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M22 5c0-1.654-1.346-3-3-3H5C3.346 2 2 3.346 2 5v2.831c0 1.053.382 2.01 1 2.746V19c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-8.424c.618-.735 1-1.692 1-2.746V5zm-2 0v2.831c0 1.14-.849 2.112-1.891 2.167L18 10c-1.103 0-2-.897-2-2V4h3c.552 0 1 .449 1 1zM10 4h4v4c0 1.103-.897 2-2 2s-2-.897-2-2V4zM4 5c0-.551.448-1 1-1h3v4c0 1.103-.897 2-2 2l-.109-.003C4.849 9.943 4 8.971 4 7.831V5zm6 14v-3h4v3h-4zm6 0v-3c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v3H5v-7.131c.254.067.517.111.787.125A3.988 3.988 0 0 0 9 10.643c.733.832 1.807 1.357 3 1.357s2.267-.525 3-1.357a3.988 3.988 0 0 0 3.213 1.351c.271-.014.533-.058.787-.125V19h-3z"></path></svg>
-							<div class="servicios__tarjeta-contenido flex flex-col gap-5 text-center mt-5">
-								<h3 class="medium--h3">E-Commerce</h3>
-								<p class="regular--h4">Puedo realizar una tienda online a la medida para tu negocio. De esa manera aumentaras tus ventas y el alcance de tu negocio.</p>
-							</div>
-						</div>
+					<div class="servicios__contenido grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
+						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
+						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
+						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
+						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
 					</div>
 				</div>
 			</section>
@@ -112,84 +94,17 @@ import '../styles/normalize.css';
 						<div class="divider"></div>
 						<p class="regular--h4 text-center" >Recorre los trabajos en los que he colaborado a lo largo de mi carrera.</p>
 					</div>
-					<div class="proyectos__contenido flex flex-col gap-5 mt-10">
-						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
-							<p class="bold--p" >Proyecto</p>
-							<h3 class="bold--h3" >Loopsy</h3>
-							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
-							<p class="bold--p" >Tecnologias:</p>
-							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
-								<div class="proyecto__tarjeta-pastilla">
-									Php
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Javascript
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Css
-								</div>
-								
-							</div>
-						</div>
-						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
-							<p class="bold--p" >Proyecto</p>
-							<h3 class="bold--h3" >Loopsy</h3>
-							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
-							<p class="bold--p" >Tecnologias:</p>
-							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
-								<div class="proyecto__tarjeta-pastilla">
-									Php
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Javascript
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Css
-								</div>
-								
-							</div>
-						</div>
-						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
-							<p class="bold--p" >Proyecto</p>
-							<h3 class="bold--h3" >Loopsy</h3>
-							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
-							<p class="bold--p" >Tecnologias:</p>
-							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
-								<div class="proyecto__tarjeta-pastilla">
-									Php
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Javascript
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Css
-								</div>
-								
-							</div>
-						</div>
-						<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
-							<p class="bold--p" >Proyecto</p>
-							<h3 class="bold--h3" >Loopsy</h3>
-							<p class="regular--p">Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes</p>
-							<p class="bold--p" >Tecnologias:</p>
-							<div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
-								<div class="proyecto__tarjeta-pastilla">
-									Php
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Javascript
-								</div>
-								<div class="proyecto__tarjeta-pastilla">
-									Css
-								</div>
-								
-							</div>
-						</div>
+					<div class="proyectos__contenido grid md:grid-cols-2 gap-5 mt-10">
+						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
+						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
+						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
+						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
+
 					</div>
 				</div>
 			</section>
 		</main>
-		<footer class="w-full flex justify-center">
+		<footer id="footer" class="w-full flex justify-center">
 			<div class="container flex flex-col gap-5 items-center">
 				<div class="footer__redes flex gap-4">
 					<!-- Aqui iconos de redes -->
@@ -205,3 +120,17 @@ import '../styles/normalize.css';
 		</footer>
 	</body>
 </html>
+<script>
+	let lastScrollTop = 0;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        header.style.top = '-200px';
+    } else {
+        header.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+});
+</script>

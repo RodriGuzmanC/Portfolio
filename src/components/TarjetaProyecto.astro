@@ -1,0 +1,24 @@
+---
+
+interface Props{
+    nombre: string;
+    descripcion: string;
+    tecnologias: Array<string>;
+}
+
+const { nombre, descripcion, tecnologias } = Astro.props;
+---
+
+<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
+    <p class="bold--p" >Proyecto</p>
+    <h3 class="bold--h3" >{nombre}</h3>
+    <p class="regular--p">{descripcion}</p>
+    <p class="bold--p" >Tecnologias:</p>
+    <div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
+        {tecnologias.map((data) => 
+        <div class="proyecto__tarjeta-pastilla w-fit">
+            {data}
+        </div>)
+        }
+    </div>
+</div>
