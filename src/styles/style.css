@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /*
 * BASE
@@ -187,6 +187,11 @@ header .header__navegador ul a:hover:before{
     width: 100%;
 }
 
+.iconos-tarjeta-servicio{
+    height: 120px;
+    fill: #fff;
+}
+
 .servicios .servicios__tarjeta{
     border: 1px solid #fff;
     background-color: #ffffff0c;
@@ -204,21 +209,26 @@ header .header__navegador ul a:hover:before{
     color: var(--color-negro);
     fill: var(--color-negro);
 }
+
+.servicios .servicios__tarjeta:hover .iconos-tarjeta-servicio{
+    fill: var(--color-negro);
+}
+
+.servicios .servicios__tarjeta #id svg path{
+    fill: #fff !important;
+    height: 90px !important;
+    width: 90px !important;
+}
 .servicios .servicios__tarjeta:hover svg path{
-    fill: #000;
+    fill: #000 !important;
 }
 
 
 .proyectos .proyectos__contenido-tarjeta{
     border-radius: 18px;
-    background: 
-                linear-gradient(
-                    to right,
-                    #0066FF, 
-                    #5096ff88
-                ),
-                url('/cap-pagina.png');
     padding: 38px;
+    background-position: center;
+    background-size: cover;
 }
 
 .proyectos .proyecto__tarjeta-pastilla{
@@ -236,6 +246,12 @@ footer .footer__redes svg{
 /*
     RESPONSIVE
 */
+
+@media (max-width: 768px){
+    .iconos-tarjeta-servicio{
+        height: 80px;
+    }
+}
 
 @media (min-width: 768px){
     #home .bold--h2{

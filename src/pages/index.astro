@@ -1,11 +1,9 @@
 ---
+import TarjetaProyecto from '../components/TarjetaProyecto.astro';
+import TarjetaServicio from '../components/TarjetaServicio.jsx';
 import '../styles/style.css';
 import '../styles/output.css';
 import '../styles/normalize.css';
-import TarjetaServicio from '../components/TarjetaServicio.astro';
-import TarjetaProyecto from '../components/TarjetaProyecto.astro';
-
-
 ---
 
 <html lang="en">
@@ -13,8 +11,10 @@ import TarjetaProyecto from '../components/TarjetaProyecto.astro';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
+		<script src="https://kit.fontawesome.com/69cd1f0cda.js" crossorigin="anonymous"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		
 	</head>
 	<style>
 		
@@ -53,7 +53,7 @@ import TarjetaProyecto from '../components/TarjetaProyecto.astro';
 						<a class="my-10 w-fit boton--hover" href="#footer">Contactame</a>
 					</div>
 					<!-- Aqui va la imagen -->
-					<object data="/programming-svg.svg" type="image/svg+xml" class="svg-container w-full md:w-2/6">
+					<object data="program.svg" type="image/svg+xml" class="svg-container w-full md:w-2/6">
 						Tu navegador no soporta SVG
 					</object>
 				</div>
@@ -61,7 +61,7 @@ import TarjetaProyecto from '../components/TarjetaProyecto.astro';
 			<section id="sobre-mi" class="sobremi w-full">
 				<div class="container md:flex justify-between">
 					<!-- Aqui va la imagen -->
-					<object data="/sobre-mi.svg" type="image/svg+xml" class="svg-container w-full mb-10 md:w-2/6">
+					<object data="sobre-mi.svg" type="image/svg+xml" class="svg-container w-full mb-10 md:w-2/6">
 						<!-- Texto alternativo en caso de que el SVG no se cargue -->
 						Tu navegador no soporta SVG
 					</object>
@@ -79,11 +79,12 @@ import TarjetaProyecto from '../components/TarjetaProyecto.astro';
 						<div class="divider"></div>
 					</div>
 					<div class="servicios__contenido grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
-						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
-						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
-						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
-						<TarjetaServicio titulo="E-commmerce" descripcion="Puedo desarrollar una tienda virtual para tu empresa o emprendimiento para potenciar tus ventas y visibilidad en internet."/>
+						<TarjetaServicio client:only="react" titulo="E-commerce" descripcion="Crea una experiencia de compra única y personalizada para tus clientes. Diseño intuitivo, integración de pagos seguros, y funcionalidades a medida para que tu tienda destaque en el mercado digital." icono="store"/>
+						<TarjetaServicio client:only="react" titulo="Aplicativos web" descripcion="Desarrollamos aplicaciones web eficientes y adaptadas a tus necesidades empresariales. Desde sistemas de gestión de asistencias hasta plataformas de emisión de boletas, ofrecemos herramientas que optimizan tus procesos y mejoran la productividad." icono="customize"/>
+						<TarjetaServicio client:only="react" titulo="Landing pages" descripcion="Diseñamos páginas web que capturan la atención de tus potenciales clientes y los guían hacia la conversión. Optimización SEO, diseño atractivo y mensajes claros para maximizar tus ventas." icono="carousel"/>
+						<TarjetaServicio client:only="react" titulo="Aplicativos móviles" descripcion="Desarrollamos apps seguras y fáciles de usar para mejorar la experiencia de tus clientes. Desde la idea inicial hasta el producto final, te ofrecemos soluciones móviles personalizadas que se adaptan a las necesidades de tu empresa." icono="devices"/>
+						<TarjetaServicio client:only="react" titulo="Sitios web informativos" descripcion="Diseñamos sitios web atractivos y funcionales que reflejan la esencia de tu negocio. Contenidos claros, navegación sencilla y diseño profesional para que tu empresa tenga una presencia online que destaque y atraiga a nuevos clientes." icono="receipt"/>
+						
 					</div>
 				</div>
 			</section>
@@ -95,11 +96,12 @@ import TarjetaProyecto from '../components/TarjetaProyecto.astro';
 						<p class="regular--h4 text-center" >Recorre los trabajos en los que he colaborado a lo largo de mi carrera.</p>
 					</div>
 					<div class="proyectos__contenido grid md:grid-cols-2 gap-5 mt-10">
-						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
-						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
-						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
-						<TarjetaProyecto nombre="Loopsy" descripcion='Proyecto desarrollado en php para una empresa de juguetes Proyecto desarrollado en php para una empresa de juguetes' tecnologias={["Php", "Js", "Html", "Wp"]}/>
-
+						<TarjetaProyecto nombre="Loopsy" descripcion='Sitio web desarrollado en wordpress, ademas de utilizar tecnologias como PHP y Javascript para lograr un mayor nivel de personalizacion y facilidad en la experiencia de manejo del sitio web.' tecnologias={["Php", "Js", "Html", "Wordpress", "Woocommerce", "ACF"]} imagenFondo="loopsy-site.png" link="https://www.loopsy.pe/"/>
+						<TarjetaProyecto nombre="AEProjects" descripcion='Proyecto desarrollado en php y Worpdress para la empresa AEProjectos, especializada en distintos servicios electricos y de ingenieria, el sitio web cuenta con distintas secciones y personalizaciones que hace al sitio web atractivo para los visitantes del sitio.' tecnologias={["Php", "Js", "Html", "Wordpress"]} imagenFondo="aeprojects-site.png" link="https://www.ganaconos.com/clientes/aeprojects/"/>
+						<TarjetaProyecto nombre="ArmabraesCorporation" descripcion='Sitio web desarrollado en Wordpress y Woocommerce, una herammienta muy poderosa para construir e-commerce y tiendas en linea de facil manejo.' tecnologias={["Php", "Js", "Html", "Wordpress", "Woocommerce"]} imagenFondo="armabraes-site.png" link="https://www.armabraescorporation.com/"/>
+						<TarjetaProyecto nombre="FrpGrating" descripcion='Landing page desarrollada en Html, Css, Javascript y Php que hace uso de la API de Brevo, un CRM potente para gestionar clientes y correos de marketing.' tecnologias={["Php", "Js", "Html", "Css"]} imagenFondo="frpgrating-landing.png" link="https://frpgrating.pe/lp/rejilla-fibra-vidrio"/>
+						<TarjetaProyecto nombre="Produktiva.Pe" descripcion='Sitio web desarrollado en Wordpress y ACF para lograr un mayor nivel de personalizacion en la gestion de los contenidos tales como el blog y los proyectos realizados.' tecnologias={["Php", "Js", "Css", "Html", "Wordpress", "ACF"]} imagenFondo="produktiva-site.png" link="https://produktiva.com.pe/"/>
+						<TarjetaProyecto nombre="WaffleXXX" descripcion='Proyecto desarrollado en Wordpress y Javascript, se implementaron animaciones y transiciones a los elementos clave del sitio web para asi lograr un mayor dinamismo y atractivo para los nuevos visitantes del sitio web.' tecnologias={["Php", "Js", "Css", "Html", "Wordpress", "ACF"]} imagenFondo="waflex-site.png" link="https://www.ganaconos.com/clientes/waflexxx/"/>
 					</div>
 				</div>
 			</section>
@@ -108,7 +110,7 @@ import TarjetaProyecto from '../components/TarjetaProyecto.astro';
 			<div class="container flex flex-col gap-5 items-center">
 				<div class="footer__redes flex gap-4">
 					<!-- Aqui iconos de redes -->
-					<a href="https://github.com/RodriGuzmanC?tab=repositories" target="__BLANK">
+					<a href="https://github.com/RodriGuzmanC" target="__BLANK">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
 					</a>
 					<a href="https://www.linkedin.com/in/eduis-rodrigo-guzman-carranza-3a2111260/" target="__BLANK">

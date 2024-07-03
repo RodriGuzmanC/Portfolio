@@ -4,12 +4,14 @@ interface Props{
     nombre: string;
     descripcion: string;
     tecnologias: Array<string>;
+    imagenFondo: string;
+    link: string;
 }
 
-const { nombre, descripcion, tecnologias } = Astro.props;
+const { nombre, descripcion, tecnologias, imagenFondo, link } = Astro.props;
 ---
 
-<div class="proyectos__contenido-tarjeta flex flex-col gap-4">
+<a href={`${link}`} target="_blank" class="proyectos__contenido-tarjeta flex flex-col gap-4" style={`background-image: linear-gradient(to right, #0066FF, #5096ff88), url('${imagenFondo}');`}>
     <p class="bold--p" >Proyecto</p>
     <h3 class="bold--h3" >{nombre}</h3>
     <p class="regular--p">{descripcion}</p>
@@ -21,4 +23,4 @@ const { nombre, descripcion, tecnologias } = Astro.props;
         </div>)
         }
     </div>
-</div>
+</a>
