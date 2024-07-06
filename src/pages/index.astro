@@ -9,16 +9,13 @@ import '../styles/normalize.css';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="logo-rodrigo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<script src="https://kit.fontawesome.com/69cd1f0cda.js" crossorigin="anonymous"></script>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Rodrigo Guzman - Desarrollador</title>
 		
 	</head>
-	<style>
-		
-	</style>
 	<body>
 		<header id="header" class="w-full fixed top-0 flex justify-center md:w-fit md:rounded-lg md:mt-8 ease duration-1000">
 			<div class="container flex justify-between">
@@ -44,7 +41,7 @@ import '../styles/normalize.css';
 			</div>
 		</header>
 		<main class="w-full" >
-			<section id="home" class="home w-full">
+			<section id="home" class="home w-full h-screen">
 				<div class="container md:flex">
 					<div class="home__titulo flex flex-col gap-4 md:w-4/6">
 						<h3 class="bold--h3 texto--primario">¡Hola!</h3>
@@ -95,10 +92,10 @@ import '../styles/normalize.css';
 						<div class="divider"></div>
 						<p class="regular--h4 text-center" >Recorre los trabajos en los que he colaborado a lo largo de mi carrera.</p>
 					</div>
-					<div class="proyectos__contenido grid md:grid-cols-2 gap-5 mt-10">
+					<div class="proyectos__contenido flex flex-wrap md:grid md:grid-cols-2 gap-5 mt-10">
 						<TarjetaProyecto nombre="Loopsy" descripcion='Sitio web desarrollado en wordpress, ademas de utilizar tecnologias como PHP y Javascript para lograr un mayor nivel de personalizacion y facilidad en la experiencia de manejo del sitio web.' tecnologias={["Php", "Js", "Html", "Wordpress", "Woocommerce", "ACF"]} imagenFondo="loopsy-site.png" link="https://www.loopsy.pe/"/>
 						<TarjetaProyecto nombre="AEProjects" descripcion='Proyecto desarrollado en php y Worpdress para la empresa AEProjectos, especializada en distintos servicios electricos y de ingenieria, el sitio web cuenta con distintas secciones y personalizaciones que hace al sitio web atractivo para los visitantes del sitio.' tecnologias={["Php", "Js", "Html", "Wordpress"]} imagenFondo="aeprojects-site.png" link="https://www.ganaconos.com/clientes/aeprojects/"/>
-						<TarjetaProyecto nombre="ArmabraesCorporation" descripcion='Sitio web desarrollado en Wordpress y Woocommerce, una herammienta muy poderosa para construir e-commerce y tiendas en linea de facil manejo.' tecnologias={["Php", "Js", "Html", "Wordpress", "Woocommerce"]} imagenFondo="armabraes-site.png" link="https://www.armabraescorporation.com/"/>
+						<TarjetaProyecto nombre="Armabraes Corporation" descripcion='Sitio web desarrollado en Wordpress y Woocommerce, una herammienta muy poderosa para construir e-commerce y tiendas en linea de facil manejo.' tecnologias={["Php", "Js", "Html", "Wordpress", "Woocommerce"]} imagenFondo="armabraes-site.png" link="https://www.armabraescorporation.com/"/>
 						<TarjetaProyecto nombre="FrpGrating" descripcion='Landing page desarrollada en Html, Css, Javascript y Php que hace uso de la API de Brevo, un CRM potente para gestionar clientes y correos de marketing.' tecnologias={["Php", "Js", "Html", "Css"]} imagenFondo="frpgrating-landing.png" link="https://frpgrating.pe/lp/rejilla-fibra-vidrio"/>
 						<TarjetaProyecto nombre="Produktiva.Pe" descripcion='Sitio web desarrollado en Wordpress y ACF para lograr un mayor nivel de personalizacion en la gestion de los contenidos tales como el blog y los proyectos realizados.' tecnologias={["Php", "Js", "Css", "Html", "Wordpress", "ACF"]} imagenFondo="produktiva-site.png" link="https://produktiva.com.pe/"/>
 						<TarjetaProyecto nombre="WaffleXXX" descripcion='Proyecto desarrollado en Wordpress y Javascript, se implementaron animaciones y transiciones a los elementos clave del sitio web para asi lograr un mayor dinamismo y atractivo para los nuevos visitantes del sitio web.' tecnologias={["Php", "Js", "Css", "Html", "Wordpress", "ACF"]} imagenFondo="waflex-site.png" link="https://www.ganaconos.com/clientes/waflexxx/"/>

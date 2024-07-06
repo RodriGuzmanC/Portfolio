@@ -7,9 +7,11 @@
 * BASE
 */
 
+html{
+    font-size: 10px;
+}
 body{
     font-family: "Rubik", sans-serif;
-    font-size: 14px;
     font-weight: 400;
     letter-spacing: 1.5px;
     display: flex;
@@ -34,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p, span{
 }
 
 .container{
-    padding: 20px;
+    padding: 2.0rem;
 }
 
 .divider{
@@ -54,19 +56,19 @@ h1, h2, h3, h4, h5, h6, p, span{
 */
 
 .light--h1, .regular--h1, .medium--h1, .bold--h1{
-    font-size: 48px;
+    font-size: 4.8rem;
 }
 .light--h2, .regular--h2, .medium--h2, .bold--h2{
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 .light--h3, .regular--h3, .medium--h3, .bold--h3{
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 .light--h4, .regular--h4, .medium--h4, .bold--h4{
-    font-size: 20px;
+    font-size: 2em;
 }
 .light--p, .regular--p, .medium--p, .bold--p{
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .light--h1, .light--h2, .light--h3, .light--h4, .light--p{
@@ -87,12 +89,14 @@ h1, h2, h3, h4, h5, h6, p, span{
 */
 
 .boton--primario{
-    padding: 13px 30px;
+    padding: 1.3rem 3.0rem;
     background-color: var(--color-primario);
     border: 3px solid #FFB633;
     border-radius: 6px;
     color: var(--color-blanco);
     transition: all 0.2s ease;
+    font-size: 1.2rem;
+    align-self: center;
 }
 .boton--primario:hover{
     border: 3px solid #FFB633;
@@ -107,6 +111,7 @@ h1, h2, h3, h4, h5, h6, p, span{
     color: var(--color-primario);
     background-color: transparent;
     transition: all 0.2s ease;
+    font-size: 1.2rem;
 }
 .boton--hover:hover{
     background-color: var(--color-primario);
@@ -119,12 +124,14 @@ h1, h2, h3, h4, h5, h6, p, span{
     background-color: var(--color-blanco);
     border-radius: 6px;
     color: var(--color-negro);
+    font-size: 1.2rem;
 }
 .boton--oscuro{
     padding: 13px 30px;
     background-color: var(--color-oscuro);
     border-radius: 6px;
     color: var(--color-blanco);
+    font-size: 1.2rem;
 }
 
 
@@ -188,14 +195,14 @@ header .header__navegador ul a:hover:before{
 }
 
 .iconos-tarjeta-servicio{
-    height: 120px;
+    height: 12.0rem;
     fill: #fff;
 }
 
 .servicios .servicios__tarjeta{
     border: 1px solid #fff;
     background-color: #ffffff0c;
-    padding: 38px;
+    padding: 3.8rem;
     border-radius: 16px;
     transition: all 0.4s ease;
 }
@@ -226,7 +233,7 @@ header .header__navegador ul a:hover:before{
 
 .proyectos .proyectos__contenido-tarjeta{
     border-radius: 18px;
-    padding: 38px;
+    padding: 3.8rem;
     background-position: center;
     background-size: cover;
 }
@@ -251,10 +258,13 @@ footer .footer__redes svg{
     .iconos-tarjeta-servicio{
         height: 80px;
     }
+    html{
+        font-size: 8.2px;
+    }
 }
 
 @media (min-width: 768px){
     #home .bold--h2{
-        font-size: 48px;
+        font-size: 4.8rem;
     }
 }
