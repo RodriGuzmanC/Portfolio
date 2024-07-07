@@ -12,13 +12,13 @@ const { nombre, descripcion, tecnologias, imagenFondo, link } = Astro.props;
 ---
 
 <a href={`${link}`} target="_blank" class="proyectos__contenido-tarjeta flex flex-col gap-4" style={`background-image: linear-gradient(to right, #0066FF, #5096ff88), url('${imagenFondo}');`}>
-    <p class="bold--p" >Proyecto</p>
+    <p class="medium--p" >Proyecto</p>
     <h3 class="bold--h3" >{nombre}</h3>
     <p class="regular--p">{descripcion}</p>
-    <p class="bold--p" >Tecnologias:</p>
+    <p class="bold--p" >Tecnologías:</p>
     <div class="proyecto__tarjeta-pastillas flex gap-4 flex-wrap">
         {tecnologias.map((data) => 
-        <div class="proyecto__tarjeta-pastilla w-fit">
+        <div class="proyecto__tarjeta-pastilla w-fit light--p">
             {data}
         </div>)
         }
