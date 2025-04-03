@@ -1,9 +1,9 @@
 ---
-import TarjetaProyecto from '../components/TarjetaProyecto.astro';
-import TarjetaServicio from '../components/TarjetaServicio.jsx';
-import '../styles/style.css';
-import '../styles/output.css';
-import '../styles/normalize.css';
+import TarjetaProyecto from "../components/TarjetaProyecto.astro";
+import TarjetaServicio from "../components/TarjetaServicio.jsx";
+import "../styles/style.css";
+import "../styles/output.css";
+import "../styles/normalize.css";
 ---
 
 <html lang="en">
@@ -11,94 +11,248 @@ import '../styles/normalize.css';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<script src="https://kit.fontawesome.com/69cd1f0cda.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/69cd1f0cda.js"
+			crossorigin="anonymous"></script>
 		<meta name="generator" content={Astro.generator} />
 		<title>Rodrigo Guzman - Desarrollador</title>
-		
 	</head>
 	<body>
-		<header id="header" class="w-full fixed top-0 flex justify-center md:w-fit md:rounded-lg md:mt-8 ease duration-1000">
+		<!-- Tarjeta -->
+
+		<a href="https://rodriguzmanc.github.io/portfolio-astro/" target="_blank">
+			<div class="floating-card">
+				<div class="card-content">
+					<p class="card-text">¡Mira lo nuevo!</p>
+					<img
+						class="portfolio-image mt-4"
+						src="https://camo.githubusercontent.com/577de6abd6c69030b518c82ae539a2882257fc37c368e6ecebae10c3c718eab3/68747470733a2f2f726f64726967757a6d616e632e6769746875622e696f2f706f7274666f6c696f2d617374726f2f726561646d652d706f7274666f6c696f2e706e67"
+						alt="Vista previa de mi portfolio"
+					/>
+				</div>
+			</div>
+		</a>
+		<!-- Cuerpo -->
+		<header
+			id="header"
+			class="w-full fixed top-0 flex justify-center md:w-fit md:rounded-lg md:mt-8 ease duration-1000"
+		>
 			<div class="container flex justify-between">
 				<div class="logo mr-10">
-					<svg width="79" height="46" viewBox="0 0 655 386" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 155.644L283.482 75.1004L277.476 126.649L0 208.803V286.126L286.152 386L293.886 328.008L44.4442 249.075L314.713 171.753L339 1L0 102.485V155.644Z" fill="white"/>
-						<path d="M655 157.617L424.448 72.375L387.096 318.45L624.088 246.075L491.424 201.042L452.784 229.992L468.24 141.533L655 207.475V283.067L333 386L387.096 0L655 107.758V157.617Z" fill="#F9CA32"/>
-					</svg>					
+					<svg
+						width="79"
+						height="46"
+						viewBox="0 0 655 386"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M0 155.644L283.482 75.1004L277.476 126.649L0 208.803V286.126L286.152 386L293.886 328.008L44.4442 249.075L314.713 171.753L339 1L0 102.485V155.644Z"
+							fill="white"></path>
+						<path
+							d="M655 157.617L424.448 72.375L387.096 318.45L624.088 246.075L491.424 201.042L452.784 229.992L468.24 141.533L655 207.475V283.067L333 386L387.096 0L655 107.758V157.617Z"
+							fill="#F9CA32"></path>
+					</svg>
 				</div>
 				<div class="header__navegador flex gap-10">
-					<nav class="hidden md:flex items-center" >
-						<ul class="flex gap-8" >
-							<a href="#home" class="medium--p" >Inicio</a>
-							<a href="#sobre-mi" class="medium--p" >Sobre mí</a>
-							<a href="#servicios-id" class="medium--p" >Servicios</a>
-							<a href="#proyectos-id" class="medium--p" >Proyectos</a>
+					<nav class="hidden md:flex items-center">
+						<ul class="flex gap-8">
+							<a href="#home" class="medium--p">Inicio</a>
+							<a href="#sobre-mi" class="medium--p">Sobre mí</a>
+							<a href="#servicios-id" class="medium--p"
+								>Servicios</a
+							>
+							<a href="#proyectos-id" class="medium--p"
+								>Proyectos</a
+							>
 						</ul>
 					</nav>
-					<a class="boton--primario" href="#footer">
-						Contáctame
-					</a>
+					<a class="boton--primario" href="#footer"> Contáctame </a>
 				</div>
 			</div>
 		</header>
-		<main class="w-full" >
+		<main class="w-full">
 			<section id="home" class="home w-full h-screen">
 				<div class="container md:flex">
 					<div class="home__titulo flex flex-col gap-4 md:w-4/6">
 						<h3 class="bold--h3 texto--primario">¡Hola!</h3>
 						<h2 class="bold--h1">Soy Rodrigo Guzmán</h2>
 						<h4 class="bold--h3">Fullstack Developer</h4>
-						<a class="my-10 w-fit boton--hover" href="#footer">Contáctame</a>
+						<a class="my-10 w-fit boton--hover" href="#footer"
+							>Contáctame</a
+						>
 					</div>
 					<!-- Aqui va la imagen -->
-					<object data="program.svg" type="image/svg+xml" class="svg-container w-full md:w-2/6">
+					<object
+						data="program.svg"
+						type="image/svg+xml"
+						class="svg-container w-full md:w-2/6"
+					>
 						Tu navegador no soporta SVG
 					</object>
 				</div>
 			</section>
 			<section id="sobre-mi" class="sobremi w-full">
-				<div class="container flex justify-between flex-col-reverse md:flex-row gap-6">
+				<div
+					class="container flex justify-between flex-col-reverse md:flex-row gap-6"
+				>
 					<!-- Aqui va la imagen -->
-					<object data="sobre-mi.svg" type="image/svg+xml" class="svg-container w-full mb-10 md:w-4/12">
+					<object
+						data="sobre-mi.svg"
+						type="image/svg+xml"
+						class="svg-container w-full mb-10 md:w-4/12"
+					>
 						<!-- Texto alternativo en caso de que el SVG no se cargue -->
 						Tu navegador no soporta SVG
 					</object>
-					<div class="sobremi__contenido flex flex-col gap-4 md:w-7/12 items-center md:items-start">
+					<div
+						class="sobremi__contenido flex flex-col gap-4 md:w-7/12 items-center md:items-start"
+					>
 						<h2 class="bold--h2">Sobre mi</h2>
 						<div class="divider"></div>
-						<p class="regular--h4" >Soy Desarrollador Fullstack con más de un año de experiencia en la creación de sitios y aplicaciones web funcionales y escalables. Me especializo en desarrollar soluciones empresariales que optimizan la productividad, con un fuerte enfoque en la escalabilidad y la seguridad. He trabajado en una variedad de proyectos, desde tiendas en línea hasta sitios web informativos, siempre asegurando que cada solución esté adaptada a las necesidades específicas de cada negocio.</p>
+						<p class="regular--h4">
+							Soy Desarrollador Fullstack con más de un año de
+							experiencia en la creación de sitios y aplicaciones
+							web funcionales y escalables. Me especializo en
+							desarrollar soluciones empresariales que optimizan
+							la productividad, con un fuerte enfoque en la
+							escalabilidad y la seguridad. He trabajado en una
+							variedad de proyectos, desde tiendas en línea hasta
+							sitios web informativos, siempre asegurando que cada
+							solución esté adaptada a las necesidades específicas
+							de cada negocio.
+						</p>
 					</div>
 				</div>
 			</section>
 			<section id="servicios-id" class="servicios w-full">
 				<div class="container">
-					<div class="servicios__titulo flex flex-col items-center gap-4 mb-5">
-						<h2 class="bold--h2" >Servicios</h2>
+					<div
+						class="servicios__titulo flex flex-col items-center gap-4 mb-5"
+					>
+						<h2 class="bold--h2">Servicios</h2>
 						<div class="divider"></div>
 					</div>
-					<div class="servicios__contenido grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-						<TarjetaServicio client:only="react" titulo="E-commerce" descripcion="Crea una experiencia de compra única y personalizada para tus clientes. Puedo desarrollar tu tienda online con integración de pagos seguros y funcionalidades a medida, para que destaques en el mercado digital." icono="store"/>
-						<TarjetaServicio client:only="react" titulo="Aplicativos web" descripcion="Puedo desarrollar aplicaciones web eficientes y adaptadas a tus necesidades empresariales. Desde sistemas de gestión de asistencias hasta plataformas de emisión de boletas, además de herramientas que optimizan tus procesos y mejoran tu productividad." icono="customize"/>
-						<TarjetaServicio client:only="react" titulo="Landing pages" descripcion="Creo páginas web que capturan la atención de tus potenciales clientes y los guían hacia la conversión. Ofrezco optimización SEO, diseño atractivo y mensajes claros para maximizar tus ventas." icono="carousel"/>
-						<TarjetaServicio client:only="react" titulo="Aplicativos móviles" descripcion="Ten más seguridad y libertad. Puedo desarrollar aplicaciones seguras y fáciles de usar para mejorar la experiencia de tus clientes. Además, puedo crear aplicaciones centradas en tu negocio para simplificar la gestión de tus procesos empresariales." icono="devices"/>
-						<TarjetaServicio client:only="react" titulo="Sitios web informativos" descripcion="Puedo desarrollar sitios web atractivos y funcionales que reflejen la esencia de tu negocio. Ofrezco contenidos claros, navegación sencilla y diseño profesional para asegurar que tu empresa tenga una presencia online destacada que atraiga a nuevos clientes." icono="receipt"/>
-						
+					<div
+						class="servicios__contenido grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+					>
+						<TarjetaServicio
+							client:only="react"
+							titulo="E-commerce"
+							descripcion="Crea una experiencia de compra única y personalizada para tus clientes. Puedo desarrollar tu tienda online con integración de pagos seguros y funcionalidades a medida, para que destaques en el mercado digital."
+							icono="store"
+						/>
+						<TarjetaServicio
+							client:only="react"
+							titulo="Aplicativos web"
+							descripcion="Puedo desarrollar aplicaciones web eficientes y adaptadas a tus necesidades empresariales. Desde sistemas de gestión de asistencias hasta plataformas de emisión de boletas, además de herramientas que optimizan tus procesos y mejoran tu productividad."
+							icono="customize"
+						/>
+						<TarjetaServicio
+							client:only="react"
+							titulo="Landing pages"
+							descripcion="Creo páginas web que capturan la atención de tus potenciales clientes y los guían hacia la conversión. Ofrezco optimización SEO, diseño atractivo y mensajes claros para maximizar tus ventas."
+							icono="carousel"
+						/>
+						<TarjetaServicio
+							client:only="react"
+							titulo="Aplicativos móviles"
+							descripcion="Ten más seguridad y libertad. Puedo desarrollar aplicaciones seguras y fáciles de usar para mejorar la experiencia de tus clientes. Además, puedo crear aplicaciones centradas en tu negocio para simplificar la gestión de tus procesos empresariales."
+							icono="devices"
+						/>
+						<TarjetaServicio
+							client:only="react"
+							titulo="Sitios web informativos"
+							descripcion="Puedo desarrollar sitios web atractivos y funcionales que reflejen la esencia de tu negocio. Ofrezco contenidos claros, navegación sencilla y diseño profesional para asegurar que tu empresa tenga una presencia online destacada que atraiga a nuevos clientes."
+							icono="receipt"
+						/>
 					</div>
 				</div>
 			</section>
 			<section id="proyectos-id" class="proyectos w-full">
 				<div class="container">
-					<div class="proyectos__titulo flex flex-col gap-4 items-center mb-10">
-						<h2 class="bold--h2" >Proyectos</h2>
+					<div
+						class="proyectos__titulo flex flex-col gap-4 items-center mb-10"
+					>
+						<h2 class="bold--h2">Proyectos</h2>
 						<div class="divider"></div>
-						<p class="regular--h4 text-center" >Explora los proyectos en los que he colaborado a lo largo de mi carrera.</p>
+						<p class="regular--h4 text-center">
+							Explora los proyectos en los que he colaborado a lo
+							largo de mi carrera.
+						</p>
 					</div>
-					<div class="proyectos__contenido flex flex-wrap md:grid md:grid-cols-2 gap-10 mt-10">
-						<TarjetaProyecto nombre="Loopsy" descripcion='Sitio web desarrollado en WordPress, además de utilizar tecnologías como PHP y JavaScript para lograr un mayor nivel de personalización y facilidad en la experiencia de manejo del sitio web.' tecnologias={["Php", "Js", "Html", "Wordpress", "Woocommerce", "ACF"]} imagenFondo="loopsy-site.png" link="https://www.loopsy.pe/"/>
-						<TarjetaProyecto nombre="AEProjects" descripcion='Proyecto desarrollado en PHP y WordPress para la empresa AEProyectos, especializada en distintos servicios eléctricos y de ingeniería. El sitio web cuenta con diversas secciones y personalizaciones que lo hacen atractivo para los visitantes.' tecnologias={["Php", "Js", "Html", "Wordpress"]} imagenFondo="aeprojects-site.png" link="https://www.ganaconos.com/clientes/aeprojects/"/>
-						<TarjetaProyecto nombre="Armabraes Corporation" descripcion='Sitio web desarrollado en WordPress y WooCommerce, una herramienta muy poderosa para construir e-commerce y tiendas en línea de fácil manejo.' tecnologias={["Php", "Js", "Html", "Wordpress", "Woocommerce"]} imagenFondo="armabraes-site.png" link="https://www.armabraescorporation.com/"/>
-						<TarjetaProyecto nombre="FrpGrating" descripcion='Landing page desarrollada en HTML, CSS, JavaScript y PHP, que hace uso de la API de Brevo, un CRM potente para gestionar clientes y correos de marketing.' tecnologias={["Php", "Js", "Html", "Css"]} imagenFondo="frpgrating-landing.png" link="https://frpgrating.pe/lp/rejilla-fibra-vidrio"/>
-						<TarjetaProyecto nombre="Produktiva.Pe" descripcion='Sitio web desarrollado en WordPress y ACF para lograr un mayor nivel de personalización en la gestión de los contenidos, tales como el blog y los proyectos realizados.' tecnologias={["Php", "Js", "Css", "Html", "Wordpress", "ACF"]} imagenFondo="produktiva-site.png" link="https://produktiva.com.pe/"/>
-						<TarjetaProyecto nombre="WaffleXXX" descripcion='Proyecto desarrollado en WordPress y JavaScript. Se implementaron animaciones y transiciones en los elementos clave del sitio web para lograr un mayor dinamismo y atractivo para los nuevos visitantes.' tecnologias={["Php", "Js", "Css", "Html", "Wordpress", "ACF"]} imagenFondo="waflex-site.png" link="https://www.ganaconos.com/clientes/waflexxx/"/>
+					<div
+						class="proyectos__contenido flex flex-wrap md:grid md:grid-cols-2 gap-10 mt-10"
+					>
+						<TarjetaProyecto
+							nombre="Loopsy"
+							descripcion="Sitio web desarrollado en WordPress, además de utilizar tecnologías como PHP y JavaScript para lograr un mayor nivel de personalización y facilidad en la experiencia de manejo del sitio web."
+							tecnologias={[
+								"Php",
+								"Js",
+								"Html",
+								"Wordpress",
+								"Woocommerce",
+								"ACF",
+							]}
+							imagenFondo="loopsy-site.png"
+							link="https://www.loopsy.pe/"
+						/>
+						<TarjetaProyecto
+							nombre="AEProjects"
+							descripcion="Proyecto desarrollado en PHP y WordPress para la empresa AEProyectos, especializada en distintos servicios eléctricos y de ingeniería. El sitio web cuenta con diversas secciones y personalizaciones que lo hacen atractivo para los visitantes."
+							tecnologias={["Php", "Js", "Html", "Wordpress"]}
+							imagenFondo="aeprojects-site.png"
+							link="https://www.ganaconos.com/clientes/aeprojects/"
+						/>
+						<TarjetaProyecto
+							nombre="Armabraes Corporation"
+							descripcion="Sitio web desarrollado en WordPress y WooCommerce, una herramienta muy poderosa para construir e-commerce y tiendas en línea de fácil manejo."
+							tecnologias={[
+								"Php",
+								"Js",
+								"Html",
+								"Wordpress",
+								"Woocommerce",
+							]}
+							imagenFondo="armabraes-site.png"
+							link="https://www.armabraescorporation.com/"
+						/>
+						<TarjetaProyecto
+							nombre="FrpGrating"
+							descripcion="Landing page desarrollada en HTML, CSS, JavaScript y PHP, que hace uso de la API de Brevo, un CRM potente para gestionar clientes y correos de marketing."
+							tecnologias={["Php", "Js", "Html", "Css"]}
+							imagenFondo="frpgrating-landing.png"
+							link="https://frpgrating.pe/lp/rejilla-fibra-vidrio"
+						/>
+						<TarjetaProyecto
+							nombre="Produktiva.Pe"
+							descripcion="Sitio web desarrollado en WordPress y ACF para lograr un mayor nivel de personalización en la gestión de los contenidos, tales como el blog y los proyectos realizados."
+							tecnologias={[
+								"Php",
+								"Js",
+								"Css",
+								"Html",
+								"Wordpress",
+								"ACF",
+							]}
+							imagenFondo="produktiva-site.png"
+							link="https://produktiva.com.pe/"
+						/>
+						<TarjetaProyecto
+							nombre="WaffleXXX"
+							descripcion="Proyecto desarrollado en WordPress y JavaScript. Se implementaron animaciones y transiciones en los elementos clave del sitio web para lograr un mayor dinamismo y atractivo para los nuevos visitantes."
+							tecnologias={[
+								"Php",
+								"Js",
+								"Css",
+								"Html",
+								"Wordpress",
+								"ACF",
+							]}
+							imagenFondo="waflex-site.png"
+							link="https://www.ganaconos.com/clientes/waflexxx/"
+						/>
 					</div>
 				</div>
 			</section>
@@ -108,28 +262,87 @@ import '../styles/normalize.css';
 				<div class="footer__redes flex gap-4">
 					<!-- Aqui iconos de redes -->
 					<a href="https://github.com/RodriGuzmanC" target="__BLANK">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							><path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+							></path></svg
+						>
 					</a>
-					<a href="https://www.linkedin.com/in/eduis-rodrigo-guzman-carranza-3a2111260/" target="__BLANK">
-						<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path></svg>
+					<a
+						href="https://www.linkedin.com/in/eduis-rodrigo-guzman-carranza-3a2111260/"
+						target="__BLANK"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							><path
+								d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+							></path></svg
+						>
 					</a>
 				</div>
-				<p class="regular--p">Elaborado por Rodrigo Guzmán   🇵🇪 | 2024</p>
+				<p class="regular--p">Elaborado por Rodrigo Guzmán 🇵🇪 | 2024</p>
 			</div>
 		</footer>
 	</body>
 </html>
+
+<style>
+	/** Estilos del globo flotante */
+	.floating-card {
+		position: fixed;
+		left: 20px;
+		bottom: 20px;
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+		width: 250px;
+		padding: 15px;
+		z-index: 1000;
+		transform: translateY(0);
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.floating-card:hover {
+		transform: translateY(-10px);
+	}
+
+	.card-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.card-text {
+		font-size: 16px;
+		color: #333;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.portfolio-image {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
+	/** Estilos globales */
+</style>
+
 <script>
 	let lastScrollTop = 0;
-const header = document.getElementById('header');
+	const header = document.getElementById("header");
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        header.style.top = '-200px';
-    } else {
-        header.style.top = '0';
-    }
-    lastScrollTop = scrollTop;
-});
+	window.addEventListener("scroll", function () {
+		let scrollTop = window.scrollY || document.documentElement.scrollTop;
+		if (scrollTop > lastScrollTop) {
+			header.style.top = "-200px";
+		} else {
+			header.style.top = "0";
+		}
+		lastScrollTop = scrollTop;
+	});
 </script>
